@@ -4,6 +4,7 @@ Welcome to my personal developer portfolio website!
 This project showcases my skills, certifications, and achievements, along with a clean, modern, and responsive design.
 
 > 🚀 Built with pure HTML, CSS (custom), and a touch of JavaScript — no frameworks like Bootstrap or Tailwind used.
+
 > 🔥 Like what you see? Fork this Repo and start configuring on your own!
 ---
 
