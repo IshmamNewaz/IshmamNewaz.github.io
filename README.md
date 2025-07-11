@@ -20,7 +20,7 @@ This project showcases my skills, certifications, and achievements, along with a
 - 📱 Fully responsive across all devices
 - 🏆 Achievements carousel using Owl Carousel
 - 🔗 Social media icons with hover effects
-- 🖼️ Logo-based cards for visual identity
+- 🖼️ Logo-based cards for visual Identity
 - ⚙️ Clean, well-organized HTML structure
 
 ---
