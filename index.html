@@ -65,10 +65,16 @@
               <a class="modern-btn modern-btn-primary" href="#modern-projects">View Projects</a>
               <a class="modern-btn modern-btn-ghost" href="#modern-contact">Let's Connect</a>
             </div>
+
+            <div class="modern-clock-card">
+              <p class="modern-clock-label">Current time</p>
+              <strong id="modern-clock-time" class="modern-clock-value" aria-live="polite">--:--:--</strong>
+              <span id="modern-clock-date" class="modern-clock-date">Loading clock...</span>
+            </div>
           </div>
 
           <aside class="modern-profile-card">
-            <img src="img/testimonial-2.jpg" alt="Portrait of Ishmam Newaz">
+            <img src="img/img.png" alt="Portrait of Ishmam Newaz">
             <div>
               <h2>Ishmam Newaz</h2>
               <p>Research Assistant • ML Engineer • .NET Developer</p>
@@ -849,11 +855,55 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/lightbox/js/lightbox.min.js"></script>
   <script src="lib/typed/typed.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+
+  <script type="module">
+    const clockTime = document.getElementById('modern-clock-time');
+    const clockDate = document.getElementById('modern-clock-date');
+
+    if (clockTime && clockDate) {
+      const timeFormatter = new Intl.DateTimeFormat([], {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      });
+
+      const dateFormatter = new Intl.DateTimeFormat([], {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+      });
+
+      const renderClock = () => {
+        const now = new Date();
+        clockTime.textContent = timeFormatter.format(now);
+        clockDate.textContent = dateFormatter.format(now);
+      };
+
+      renderClock();
+
+      try {
+        const { createTimer } = await import('https://esm.sh/animejs@4.0.0/timer');
+
+        createTimer({
+          duration: 1000,
+          loop: true,
+          frameRate: 1,
+          onBegin: renderClock,
+          onUpdate: renderClock,
+          onLoop: renderClock
+        });
+      } catch (error) {
+        setInterval(renderClock, 1000);
+      }
+    }
+  </script>
 
 </body>
 </html>
