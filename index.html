@@ -888,20 +888,9 @@
 
       renderClock();
 
-      try {
-        const { createTimer } = await import('https://esm.sh/animejs@4.0.0/timer');
-
-        createTimer({
-          duration: 1000,
-          loop: true,
-          frameRate: 1,
-          onBegin: renderClock,
-          onUpdate: renderClock,
-          onLoop: renderClock
-        });
-      } catch (error) {
-        setInterval(renderClock, 1000);
-      }
+      // Avoid cross-origin ESM import (causes 404 on GitHub Pages); use simple interval.
+      console.info('CLOCK — using setInterval fallback (no ESM import)');
+      setInterval(renderClock, 1000);
     }
   </script>
 
