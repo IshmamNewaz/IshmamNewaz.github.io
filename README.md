@@ -1,55 +1,16 @@
-# 💼 Ishmam Newaz — Developer Portfolio
+# React + Vite
 
-Welcome to my personal developer portfolio website!  
-This project showcases my skills, certifications, and achievements, along with a clean, modern, and responsive design.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-> 🚀 Built with pure HTML, CSS (custom), and a touch of JavaScript — no frameworks like Bootstrap or Tailwind used.
+Currently, two official plugins are available:
 
-> 🔥 Like what you see? Fork this Repo and start configuring on your own!
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🌐 Live Preview
+## React Compiler
 
-👉 [Visit Portfolio Website](https://ishmamnewaz.github.io/)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
----
+## Expanding the Oxlint configuration
 
-## 🧩 Features
-
-- 🎨 Modern and elegant layout
-- 📱 Fully responsive across all devices
-- 🏆 Achievements carousel using Owl Carousel
-- 🔗 Social media icons with hover effects
-- 🖼️ Logo-based cards for visual Identity
-- ⚙️ Clean, well-organized HTML structure
-
----
-
-## 📸 Sections Overview
-
-### 🔹 Hero / Banner
-- Brief intro and name
-- Background image with overlay effect
-
-### 🔹 About Me
-- Education, interests, and focus areas
-
-### 🔹 Achievements Carousel
-- Custom-designed cards
-- Logo + certification info side by side
-- Responsive at all sizes, never stacks the logo on top
-
-### 🔹 Contact & Footer
-- Email and social links (LinkedIn, Hugging Face, etc.)
-- Icon hover effects
-
----
-
-## 🛠️ Tech Stack
-
-- HTML5
-- CSS3 (custom, no framework)
-- JavaScript (vanilla)
-- Owl Carousel (for slider functionality)
-- Font Awesome (for icons)
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
